@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+.center{
+width: 300px;
+marging: auto;
+
+padding: 10%
+}
+.button{
+	position: relative;
+	display: inline-block;
+	width: 4em;
+	height: 4em;
+	line-height: 4em;
+	vertical-aling: middle;
+	text-aling: center;
+	text-decoration: none;
+	color: #000;
+	outline:none;
+	border-radius: 15px;
+	box-shadow: 0 0 0 1px #ddd insert, 0 1px 1px #fff;
+}</style>
+<title>Insert title here</title>
+</head>
+<body>
+<div class="center">
+  <h1>Online Calculator</h1>
+        <table>            
+            <tr>
+                <td>
+                    <table >
+                        <tr>
+                            <td colspan="5">
+                                <div  wicket:id="return" ></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form wicket:id="form">
+                        <table>
+                            <tr>
+                                
+                                <td><input class="button" wicket:id="7" type="submit" value="7"></td>
+                                <td><input class="button" wicket:id="8" type="submit" value="8"></td>
+                                <td><input class="button" wicket:id="9" type="submit" value="9"></td>
+                                <td><input class="button" wicket:id="buttonDivide" type="submit" value="/"></td>
+                                <td><input class="button" wicket:id="buttonSqrt" type="submit" value="√"></td>
+                                
+                            </tr>
+                            <tr>
+                                <td><input class="button" wicket:id="4" type="submit" value="4"></td>
+                                <td><input class="button" wicket:id="5" type="submit" value="5"></td>
+                                <td><input class="button" wicket:id="6" type="submit" value="6"></td>
+                                <td><input class="button" wicket:id="buttonMultiply" type="submit" value="*"></td>
+                                <td><input class="button" wicket:id="buttonCube" type="submit" value="^3"></td>
+                                
+                            </tr>
+                            <tr>
+                                <td><input class="button" wicket:id="1" type="submit" value="1"></td>
+                                <td><input class="button" wicket:id="2" type="submit" value="2"></td>
+                                <td><input class="button" wicket:id="3" type="submit" value="3"></td>
+                                <td><input class="button" wicket:id="buttonMinus" type="submit" value="-"></td>
+                                <td><input class="button" wicket:id="buttonSqr" type="submit" value="^2"></td>
+                            </tr>
+                            <tr>         
+                            	<td><input class="button" wicket:id="buttonCancel" type="submit" value="C"></td>                     
+                                <td><input class="button" wicket:id="0" type="submit" value="0"></td>
+                                <td><input class="button" wicket:id="buttonPoint" type="submit" value="."></td>
+                                <td><input class="button" wicket:id="buttonPlus" type="submit" value="+"></td>
+                                <td><input class="button" wicket:id="buttonResult" type="submit" value="="></td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <hr/>
+  
+</div>
+</body>
+</html>
