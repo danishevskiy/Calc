@@ -2,64 +2,69 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style type="text/css">
-.center{
-width: 300px;
-marging: auto;
+<wicket:head> 
+            <wicket:link> 
+               <link rel="stylesheet" type="text/css" href="style.css"/>
+                <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+				<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+				<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+				<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-padding: 10%
-}
-.button{
-	position: relative;
-	display: inline-block;
-	width: 4em;
-	height: 4em;
-	line-height: 4em;
-	vertical-aling: middle;
-	text-aling: center;
-	text-decoration: none;
-	color: #000;
-	outline:none;
-	border-radius: 15px;
-	box-shadow: 0 0 0 1px #ddd insert, 0 1px 1px #fff;
-}</style>
-<title>Insert title here</title>
+				<!-- Custom styles for our template -->
+				<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+				<link rel="stylesheet" href="assets/css/main.css">
+            </wicket:link> 
+        </wicket:head> 
+
+
+<title>CALCULATOR</title>
 </head>
 <body>
-<div class="center">
-  <h1>Online Calculator</h1>
-        <table>            
+	<!-- HEADER -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >		
+	</div> 
+	<!-- /HEADER -->
+	<!-- /Header -->
+	<div class="jumbotron top-space">
+  		<h1 class="text-center thin">Online Calculator</h1>
+  		<hr/>
+  		
+  		
+  <table width="90%" cellpadding="5" cellspacing="0">
+   <tr>
+    <td id="col1">
+    	<p><b>What is the Online Calculator?</b></p>
+		<p>The Online Calculator is a simple tool to make simple<br>
+		math calculations. It works like most pocket calculators: <br>
+		press the buttons, the numbers appear on the display,<br>
+		press "=" to display the result, press "C" to delete etc.
+	</td>
+    <td id="col2">
+      <table>            
             <tr>
                 <td>
-                    <table >
-                        <tr>
-                            <td colspan="5">
-                                <div  wicket:id="return" ></div>
-                            </td>
-                        </tr>
-                    </table>
+                	<div  wicket:id="return" ></div>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td align="center">
                     <form wicket:id="form">
-                        <table>
+                    <hr/>
+                        <table width="90%" cellpadding="5" cellspacing="0">
                             <tr>
-                                
                                 <td><input class="button" wicket:id="7" type="submit" value="7"></td>
                                 <td><input class="button" wicket:id="8" type="submit" value="8"></td>
                                 <td><input class="button" wicket:id="9" type="submit" value="9"></td>
                                 <td><input class="button" wicket:id="buttonDivide" type="submit" value="/"></td>
                                 <td><input class="button" wicket:id="buttonSqrt" type="submit" value="√"></td>
-                                
                             </tr>
                             <tr>
                                 <td><input class="button" wicket:id="4" type="submit" value="4"></td>
                                 <td><input class="button" wicket:id="5" type="submit" value="5"></td>
                                 <td><input class="button" wicket:id="6" type="submit" value="6"></td>
                                 <td><input class="button" wicket:id="buttonMultiply" type="submit" value="*"></td>
-                                <td><input class="button" wicket:id="buttonCube" type="submit" value="^3"></td>
-                                
+                                <td><input class="button" wicket:id="buttonCube" type="submit" value="^3"></td>                                
                             </tr>
                             <tr>
                                 <td><input class="button" wicket:id="1" type="submit" value="1"></td>
@@ -80,8 +85,30 @@ padding: 10%
                 </td>
             </tr>
         </table>
-        <hr/>
-  
+    </td>
+    <td id="col3">
+    	<p><b>Simple operations</b></p>
+		<ul>The Online Calculator supports the following operations:
+			<li>Division (key '/')</li>
+			<li>Multiplication (key '*')</li>
+			<li>Subtraction (key '-')</li>
+			<li>Addition (key '+')</li>
+			<li>Sqrt (key 'sqrt')</li>
+			<li>Cube (key '^3')</li>
+			<li>Sqr (key '^2')</li>
+		</ul>
+    </td>
+   </tr>
+  </table>  
 </div>
+	<footer>
+		<div class="footer2">
+			<div class="container">
+				<p class="text-right">
+					2017, A.Danishevskiy by  <a href="https://www.linkedin.com/in/andrew-danishevskiy-820abb121/" rel="designer">linkedin</a> 
+				</p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

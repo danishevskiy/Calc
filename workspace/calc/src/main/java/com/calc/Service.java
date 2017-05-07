@@ -1,15 +1,38 @@
 package com.calc;
 
+/**
+ * 
+ * The Service class for calculator operation
+ * 
+ * @author Андрей
+ *
+ */
+
 public class Service {
 	
-	protected StateEnum state;
+	/**
+	 * The variable stores the state of a number
+	 */
+	private StateEnum state;
 	
-	protected Operation op;
+	/**
+	 * The variable stores information about the operation
+	 */
+	private Operation op;
 	
-	protected Double a;
+	/**
+	 * The variable stores the first or last entered number
+	 */
 	
-	protected String result;
+	private Double a;
+	/**
+	 * The variable stores the result
+	 */
+	private String result;
     
+	/**
+	 * The main constructor Service
+	 */
     public Service() {
         
         op = Operation.RESULT;
@@ -17,10 +40,22 @@ public class Service {
         result = "Pleas, click the button";
     }
 
+    /**
+     * The method for storing the next input number
+     * 
+     * @return The second operand
+     */
     public Double getNext() {
         return Double.valueOf(result);
     }
     
+    /**
+     * Method for storing and transmitting the state of an operation
+     * 
+     * @param op
+     * 
+     * @return The second operand or result
+     */
     public void operation(Operation op) {
         if (a == null) {
             a = Double.valueOf(result);
@@ -32,22 +67,37 @@ public class Service {
         }
     }
     
+    /**
+     * This is the method of division
+     */
     public void divide() {
         operation(Operation.DIVEDE);
     }
     
+    /**
+     * This is the method of multiply
+     */
     public void multiply() {
         operation(Operation.MULTIPLY);
     }
     
+    /**
+     * This is the method of subtraction
+     */
     public void minus() {
         operation(Operation.MINUS);
     }
     
+    /**
+     * This is the method of addition 
+     */
     public void plus() {
         operation(Operation.PLUS);
     }  
    
+    /**
+     * This is the method of result
+     */
     public void result(Double b) {
         switch (op) {
         
